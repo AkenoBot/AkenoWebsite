@@ -3,10 +3,12 @@
   margin: 0;
   padding: 0;
 }
-#grad1 {
-  height: 680px;
-  background: rgb(74,0,134);
-  background-image: linear-gradient( #4a0086, #020005);
+body {
+  background-color: #eee;
+  background-image:         linear-gradient(top, rgb(167, 0, 209) 0%, rgb(55, 196, 0) 300px); /* W3C */
+  background-image:    -moz-linear-gradient(top, rgb(255, 0, 0) 0%, rgb(187, 106, 0) 300px); /* FF3.6+ */
+  background-image: -webkit-linear-gradient(top, rgb(141, 6, 6) 0%, rgb(0, 219, 235) 300px); /* Chrome10+,Safari5.1+ */
+background-repeat:no-repeat;
 }
 header {
   display: flex;
