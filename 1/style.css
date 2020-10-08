@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    background-color: #02bf57;
+    color: white;
+    font-family: 'Ubuntu',
+    sans-serif;
+    padding: 30px;
+}
+
+body * {
+    text-shadow: 0px 0px 10px black;
+}
+
+.header {
+    padding: 30px;
+    text-align: center;
+    background: #0a7537;
+    color: white;
+    font-size: 20;
+    margin: 0;
+    height: 30%;
+    width: 99%;
+    box-shadow: 0px 0px 10px black;
+}
+
+.header * {
+    text-shadow: 0px 0px 10px black;
+    margin: 10px;
+}
+
+div.navbar {
+    text-align: center;
+}
+
+div.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+div.nav {
+    display: inline-block;
+    width: auto;
+    background-color: #2f3030;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px black;
+}
+/* .navbar {
+    overflow: hidden;
+
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  } */
+  
+div.nav:hover {
+    background-color: #7e8182;
+    box-shadow: 0px 0px 10px white;
+}
+
+th {
+    width: 1/3;
+}
+
+th * {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    /* height: 100%; */
+    border: 5px white solid;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px black;
+}
+/* Slide show shit */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 650px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.center {
+    margin: 10px auto 20px;
+    display: block;
+  }
+  .avatar {
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 20%;
+  }

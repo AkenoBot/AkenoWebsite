@@ -1,182 +1,341 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-    background-color: #02bf57;
-    color: white;
-    font-family: 'Ubuntu',
-    sans-serif;
-    padding: 30px;
-}
+    html {
+      height: 100%;
+      /* background-color: #4b0997; */
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background: #4b0997;
+      background: -webkit-linear-gradient(to left top, #4b0997, black);
+      background: -moz-linear-gradient(to left top, #4b0997, black);
+      background: -ms-linear-gradient(to left top, #4b0997, black);
+      background: -o-linear-gradient(to left top, #4b0997, black);
+      background-image: linear-gradient(to bottom right, #4b0997, black);
+    }
 
-body * {
-    text-shadow: 0px 0px 10px black;
-}
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px 10%;
+      background-color: #24252a;
+    }
 
-.header {
-    padding: 30px;
-    text-align: center;
-    background: #0a7537;
-    color: white;
-    font-size: 20;
-    margin: 0;
-    height: 30%;
-    width: 99%;
-    box-shadow: 0px 0px 10px black;
-}
+    .logo {
+      margin-right: auto;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 1000;
+      color: #edf0f1;
+    }
 
-.header * {
-    text-shadow: 0px 0px 10px black;
-    margin: 10px;
-}
+    .nav__links {
+      list-style: none;
+      display: flex;
+    }
 
-div.navbar {
-    text-align: center;
-}
+    .nav__links a,
+    .cta,
+    .overlay__content a {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      color: #edf0f1;
+      text-decoration: none;
+    }
 
-div.navbar a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
+    .nav__links li {
+      padding: 0px 20px;
+    }
 
-div.nav {
-    display: inline-block;
-    width: auto;
-    background-color: #2f3030;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px black;
-}
-/* .navbar {
-    overflow: hidden;
+    .nav__links li a {
+      transition: all 0.3s ease 0s;
+    }
 
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-  } */
-  
-div.nav:hover {
-    background-color: #7e8182;
-    box-shadow: 0px 0px 10px white;
-}
+    .nav__links li a:hover {
+      color: #7700ff;
+    }
 
-th {
-    width: 1/3;
-}
+    .cta {
+      margin-left: 20px;
+      padding: 9px 25px;
+      background-color: #0088a9;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+    }
 
-th * {
-    margin: 20px;
-}
+    .cta:hover {
+      background-color: #4b0997;
+    }
 
-h1 {
-    text-align: center;
-}
-
-img {
-    /* height: 100%; */
-    border: 5px white solid;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px black;
-}
-/* Slide show shit */
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 650px;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-.center {
-    margin: 10px auto 20px;
-    display: block;
+    /* Mobile Nav */
+    .tab-bar {
+      background-color: #4b0997;
   }
-  .avatar {
-    display: block;
-    margin-left: auto;
-    margin-right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 20%;
-  }
+    .menu {
+      display: none;
+    }
+
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      background-color: #24252a;
+      overflow-x: hidden;
+      transition: all 0.5s ease 0s;
+    }
+
+    .overlay--active {
+      width: 100%;
+    }
+
+    .overlay__content {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay a {
+      padding: 15px;
+      font-size: 36px;
+      display: block;
+      transition: all 0.3s ease 0s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+      color: #0088a9;
+    }
+
+    .overlay .close {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+      color: #edf0f1;
+      cursor: pointer;
+    }
+
+    @media screen and (max-height: 450px) {
+      .overlay a {
+        font-size: 20px;
+      }
+
+      .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+    }
+
+    @media only screen and (max-width: 800px) {
+
+      .nav__links,
+      .cta {
+        display: none;
+      }
+
+      .menu {
+        display: initial;
+      }
+    }
+
+    @-webkit-keyframes avatar-bounce {
+      0% {
+        transform: scale(0.9) translateY(0)
+      }
+
+      to {
+        transform: scale(0.9) translateY(1vw)
+      }
+    }
+
+    @keyframes avatar-bounce {
+      0% {
+        transform: scale(0.9) translateY(0)
+      }
+
+      to {
+        transform: scale(0.9) translateY(1vw)
+      }
+    }
+
+    #akeno-avatar {
+      display: block;
+      -webkit-animation: avatar-bounce 1.4s ease-in-out infinite alternate;
+      animation: avatar-bounce 1.4s ease-in-out infinite alternate;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50vw
+    }
+
+    .column[data-v-057b4f6a] {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 440px;
+      max-width: 110px;
+      width: 440px;
+      height: 110px;
+      margin: 0 2.6rem;
+      border-radius: 12px
+    }
+
+    #column2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+      min-width: 440px;
+      max-width: 110px;
+      width: 110px;
+      height: 110px;
+      margin: 0 2.6rem;
+      border-radius: 12px
+    }
+
+    img {
+      /* height: 100%; */
+      border: 10px #29044d solid;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px black;
+    }
+
+    .column2 {
+      display: block;
+      margin-right: 100%;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+    .texts {
+      flex-direction: column;
+      color: white;
+      font-family: 'Ubuntu',
+        sans-serif;
+      padding: 30px;
+      font-size: 20px
+    }
+    div.navbar {
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+    }
+    
+    div.navbar a {
+      font-family: 'Ubuntu',
+      sans-serif;
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+    }
+    
+    div.nav {
+      font-family: 'Ubuntu',
+      sans-serif;
+      display: inline-block;
+      width: 40%;
+      background-color: #2a0158;
+      margin: 20px;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px black;
+      border: 10px #ffffff solid;
+    }
+    
+    /* .navbar {
+        overflow: hidden;
+    
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+      } */
+    
+    div.nav:hover {
+      font-family: 'Ubuntu',
+      sans-serif;
+      background-color: #580d7a;
+      box-shadow: 0px 0px 10px white;
+    }
+    
+    th {
+      width: 1/3;
+    }
+    
+    th * {
+      margin: 20px;
+    }
+    
+    .main {
+      max-width: 1000px;
+      margin: auto;
+    }
+    
+    h1 {
+      font-size: 50px;
+      word-break: break-all;
+    }
+    
+    .row {
+      margin: 8px -16px;
+    }
+    
+    /* Add padding BETWEEN each column (if you want) */
+    .row,
+    .row > .column {
+      padding: 8px;
+    }
+    
+    /* Create four equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 25%;
+    }
+    
+    /* Clear floats after rows */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Content */
+    .content {
+      opacity: 0.5;
+      background-color: black;
+      padding: 10px;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 900px) {
+      .column {
+        width: 50%;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
