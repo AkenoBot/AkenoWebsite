@@ -4,9 +4,20 @@
       padding: 0;
     }
 
-    body {
-      background-color: #4b0997;
-      background-image: repeating-linear-gradient(to bottom right, #4b0997 , black);
+    html {
+      height: 100%;
+      /* background-color: #4b0997; */
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background: #4b0997;
+      background: -webkit-linear-gradient(to left top, #4b0997, black);
+      background: -moz-linear-gradient(to left top, #4b0997, black);
+      background: -ms-linear-gradient(to left top, #4b0997, black);
+      background: -o-linear-gradient(to left top, #4b0997, black);
+      background-image: linear-gradient(to bottom right, #4b0997, black);
     }
 
     header {
@@ -55,7 +66,7 @@
       padding: 9px 25px;
       background-color: #0088a9;
       border: none;
-      border-radius: 50px;
+      border-radius: 250px;
       cursor: pointer;
       transition: all 0.3s ease 0s;
     }
@@ -250,7 +261,7 @@
       text-align: center;
       border-radius: 5px;
       box-shadow: 0px 0px 10px black;
-      border: 10px #ffffff solid;
+      border: 5px #ffffff solid;
     }
     
     /* .navbar {
