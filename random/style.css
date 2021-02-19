@@ -238,7 +238,7 @@
       min-width: 400px;
 
       background-color: #2a0158;
-      margin: 10px;
+      margin: 20px;
       padding: 10px;
       text-align: center;
       border-radius: 5px;
@@ -315,5 +315,5 @@
       font-family: 'Ubuntu',
         sans-serif;
       padding: 30px;
-      font-size: 70%
+      font-size: 50%
     }
