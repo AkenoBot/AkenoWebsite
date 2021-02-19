@@ -215,7 +215,7 @@
       text-decoration: none;
       color: white;
       font-size: 20px;
-      min-width: 400px;
+      min-width: 75%;
 
     }
 
@@ -225,7 +225,7 @@
       text-decoration: none;
       color: white;
       font-size: 20px;
-      min-width: 400px;
+      min-width: 75%;
       max-width: 50%;
 
     }
@@ -235,7 +235,7 @@
         sans-serif;
       display: inline-block;
       width: 40%;
-      min-width: 400px;
+      min-width: 75%;
 
       background-color: #2a0158;
       margin: 20px;
