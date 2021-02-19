@@ -64,9 +64,9 @@
     .cta {
       margin-left: 20px;
       padding: 9px 25px;
-      background-color: #0088a9;
+      background-color: #7700ff;
       border: none;
-      border-radius: 250px;
+      border-radius: 50px;
       cursor: pointer;
       transition: all 0.3s ease 0s;
     }
@@ -78,8 +78,7 @@
     /* Mobile Nav */
     .tab-bar {
       background-color: #4b0997;
-    }
-
+  }
     .menu {
       display: none;
     }
@@ -117,7 +116,7 @@
 
     .overlay a:hover,
     .overlay a:focus {
-      color: #4b0997;
+      color: #0088a9;
     }
 
     .overlay .close {
@@ -153,8 +152,36 @@
       }
     }
 
+    @-webkit-keyframes avatar-bounce {
+      0% {
+        transform: scale(0.9) translateY(0)
+      }
 
+      to {
+        transform: scale(0.9) translateY(1vw)
+      }
+    }
 
+    @keyframes avatar-bounce {
+      0% {
+        transform: scale(0.9) translateY(0)
+      }
+
+      to {
+        transform: scale(0.9) translateY(1vw)
+      }
+    }
+
+    #akeno-avatar {
+      display: block;
+      -webkit-animation: avatar-bounce 1.4s ease-in-out infinite alternate;
+      animation: avatar-bounce 1.4s ease-in-out infinite alternate;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1%;
+      max-width: 75%;
+      min-width: auto;
+    }
 
     .column[data-v-057b4f6a] {
 
@@ -209,46 +236,36 @@
       padding: 30px;
       font-size: 20px
     }
-
     div.navbar {
       text-align: center;
       text-decoration: none;
       color: white;
       font-size: 20px;
-      min-width: 40%;
-      justify-content: center;
-      align-items: center;
     }
-
+    
     div.navbar a {
       font-family: 'Ubuntu',
-        sans-serif;
+      sans-serif;
       text-decoration: none;
       color: white;
       font-size: 20px;
-      min-width: 40%;
-      max-width: 50%;
-      justify-content: center;
-      align-items: center;
     }
-
+    
     div.nav {
       font-family: 'Ubuntu',
-        sans-serif;
+      sans-serif;
       display: inline-block;
-      width: auto;
-      min-width: 40%;
-      justify-content: center;
-      align-items: center;
+      max-width: 75%;
+      min-width: 35%;
       background-color: #2a0158;
       margin: 20px;
       padding: 10px;
       text-align: center;
       border-radius: 5px;
       box-shadow: 0px 0px 10px black;
-      border: 5px #ffffff solid;
+      border: 10px #ffffff solid;
     }
-
+    
     /* .navbar {
         overflow: hidden;
     
@@ -256,77 +273,22 @@
         position: -webkit-sticky;
         top: 0;
       } */
-
-    /* div.nav:hover {
+    
+    div.nav:hover {
       font-family: 'Ubuntu',
-        sans-serif;
+      sans-serif;
       background-color: #580d7a;
       box-shadow: 0px 0px 10px white;
-    } */
-
+    }
+    
     th {
       width: 1/3;
     }
-
+    
     th * {
       margin: 20px;
     }
-
+    
     h1 {
       text-align: center;
-    }
-
-    .styled-table {
-      border-collapse: collapse;
-      margin: 25px 0;
-      font-size: 0.9em;
-      font-family: sans-serif;
-      min-width: 75%;
-      /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
-    }
-
-    .styled-table thead tr {
-      background-color: #2a0158;
-      color: #ffffff;
-      text-align: left;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .styled-table th,
-    .styled-table td {
-      padding: 12px 15px;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .styled-table tbody tr {
-      border-bottom: 1px solid #dddddd;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .styled-table tbody tr:nth-of-type(even) {
-      background-color: #2a0158;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .styled-table tbody tr:last-of-type {
-      border-bottom: 2px solid #2a0158;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .styled-table tbody tr.active-row {
-      font-weight: bold;
-      color: #2a0158;
-    }
-    .table-text {
-      flex-direction: column;
-      color: white;
-      font-family: 'Ubuntu',
-        sans-serif;
-      padding: 30px;
-      font-size: 70%
     }
