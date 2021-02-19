@@ -216,7 +216,8 @@
       color: white;
       font-size: 20px;
       min-width: 400px;
-
+      justify-content: center;
+      align-items: center;
     }
 
     div.navbar a {
@@ -227,7 +228,8 @@
       font-size: 20px;
       min-width: 400px;
       max-width: 50%;
-
+      justify-content: center;
+      align-items: center;
     }
 
     div.nav {
@@ -236,7 +238,8 @@
       display: inline-block;
       width: 40%;
       min-width: 400px;
-
+      justify-content: center;
+      align-items: center;
       background-color: #2a0158;
       margin: 20px;
       padding: 10px;
@@ -286,28 +289,40 @@
       background-color: #2a0158;
       color: #ffffff;
       text-align: left;
+      justify-content: center;
+      align-items: center;
     }
 
     .styled-table th,
     .styled-table td {
       padding: 12px 15px;
+      justify-content: center;
+      align-items: center;
     }
 
     .styled-table tbody tr {
       border-bottom: 1px solid #dddddd;
+      justify-content: center;
+      align-items: center;
     }
 
     .styled-table tbody tr:nth-of-type(even) {
       background-color: #2a0158;
+      justify-content: center;
+      align-items: center;
     }
 
     .styled-table tbody tr:last-of-type {
       border-bottom: 2px solid #2a0158;
+      justify-content: center;
+      align-items: center;
     }
 
     .styled-table tbody tr.active-row {
       font-weight: bold;
       color: #2a0158;
+      justify-content: center;
+      align-items: center;
     }
     .table-text {
       flex-direction: column;
@@ -316,4 +331,6 @@
         sans-serif;
       padding: 30px;
       font-size: 70%
+      justify-content: center;
+      align-items: center;
     }
