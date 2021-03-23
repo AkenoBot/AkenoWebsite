@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        height: 100%;
+        /* background-color: #4b0997; */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background: #4b0997;
+        background: -webkit-linear-gradient(to left top, #4b0997, black);
+        background: -moz-linear-gradient(to left top, #4b0997, black);
+        background: -ms-linear-gradient(to left top, #4b0997, black);
+        background: -o-linear-gradient(to left top, #4b0997, black);
+        background-image: linear-gradient(to bottom right, #4b0997, black);
+    }
+
+    header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px 10%;
+        background-color: #24252a;
+    }
+
+    .logo {
+        margin-right: auto;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 1000;
+        color: #edf0f1;
+    }
+
+    .nav__links {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav__links a,
+    .cta,
+    .overlay__content a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: #edf0f1;
+        text-decoration: none;
+    }
+
+    .nav__links li {
+        padding: 0px 20px;
+    }
+
+    .nav__links li a {
+        transition: all 0.3s ease 0s;
+    }
+
+    .nav__links li a:hover {
+        color: #7700ff;
+    }
+
+    .cta {
+        margin-left: 20px;
+        padding: 9px 25px;
+        background-color: #7700ff;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+
+    .cta:hover {
+        background-color: #4b0997;
+    }
+
+    /* Mobile Nav */
+    .tab-bar {
+        background-color: #4b0997;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        background-color: #24252a;
+        overflow-x: hidden;
+        transition: all 0.5s ease 0s;
+    }
+
+    .overlay--active {
+        width: 100%;
+    }
+
+    .overlay__content {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .overlay a {
+        padding: 15px;
+        font-size: 36px;
+        display: block;
+        transition: all 0.3s ease 0s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+        color: #7700ff;
+    }
+
+    .overlay .close {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        color: #edf0f1;
+        cursor: pointer;
+    }
+
+    @media screen and (max-height: 450px) {
+        .overlay a {
+            font-size: 20px;
+        }
+
+        .overlay .close {
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+
+        .nav__links,
+        .cta {
+            display: none;
+        }
+
+        .menu {
+            display: initial;
+        }
+    }
+
+    @-webkit-keyframes avatar-bounce {
+        0% {
+            transform: scale(0.9) translateY(0)
+        }
+
+        to {
+            transform: scale(0.9) translateY(1vw)
+        }
+    }
+
+    @keyframes avatar-bounce {
+        0% {
+            transform: scale(0.9) translateY(0)
+        }
+
+        to {
+            transform: scale(0.9) translateY(1vw)
+        }
+    }
+
+    #akeno-avatar {
+        display: block;
+        -webkit-animation: avatar-bounce 1.4s ease-in-out infinite alternate;
+        animation: avatar-bounce 1.4s ease-in-out infinite alternate;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50vw
+    }
+
+    .column[data-v-057b4f6a] {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 440px;
+        max-width: 110px;
+        width: 440px;
+        height: 110px;
+        margin: 0 2.6rem;
+        border-radius: 12px
+    }
+
+    #column2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        min-width: 440px;
+        max-width: 110px;
+        width: 110px;
+        height: 110px;
+        margin: 0 2.6rem;
+        border-radius: 12px
+    }
+
+    img {
+        /* height: 100%; */
+        border: 20px #29044d solid;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+
+    .column2 {
+        display: block;
+        margin-right: 100%;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+    .texts {
+        flex-direction: column;
+        color: white;
+        font-family: 'Ubuntu',
+            sans-serif;
+        padding: 30px;
+        font-size: 30px;
+        text-align: center
+    }
+
+    .fourfour {
+        flex-direction: column;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1000%;
+        text-align: center
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>404 </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <meta property="og:url" content="https://toasty.netlify.app/invite/akeno">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Error">
+    <meta property="og:description" content="Error 404">
+    <meta property="og:image"
+        content="https://cdn.discordapp.com/avatars/377880600381620226/dacc9b226e99e16cfdc16c0f3a9372fd.webp?size=2048">
+    <meta name="theme-color" content="#4b0997">
+    <meta property="theme-color" content="#4b0997">
+    <link rel="icon" href="https://imgur.com/eJwxSe6.png">
+</head>
+
+<body>
+    <header>
+        <a class="logo">Toast</a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/invite/akeno">Akeno</a></li>
+                <li><a href="https://Toasty.netlify.app/Portfolio">Portfolio</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="https://akeno.netlify.app/server">Discord Support</a>
+        <p class="menu cta">Menu</p>
+    </header>
+    <div id="mobile__menu" class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="/invite/akeno">Akeno</a>
+            <a href="/Portfolio">Portfolio</a>
+            <a href="https://akeno.netlify.app/server">Discord Support</a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const doc = document;
+        const menuOpen = doc.querySelector(".menu");
+        const menuClose = doc.querySelector(".close");
+        const overlay = doc.querySelector(".overlay");
+
+        menuOpen.addEventListener("click", () => {
+            overlay.classList.add("overlay--active");
+        });
+
+        menuClose.addEventListener("click", () => {
+            overlay.classList.remove("overlay--active");
+        });
+    </script>
+    <div id="grad1"></div>
+    <div class="transbox">
+        <div class="texts">
+            <p style="text-align: center;">Oh no! Page not found!</p>
+
+
+
+
+        </div>
+    </div>
+    <p style="text-align: center;" class="fourfour"><strong>
+            404</strong>
+    </p>
+</body>
+
+</html>
