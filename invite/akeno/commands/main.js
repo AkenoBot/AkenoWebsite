@@ -2,7 +2,7 @@
 //  main.js 
    
 //  GET request using fetch() 
-fetch("https://e93e8f05d5f8.ngrok.io/api/v1/cmds") 
+fetch("http://142.54.191.92:1285/api/v1/cmds") 
     
     // Converting received data to JSON 
     .then(response => response.json()) 
